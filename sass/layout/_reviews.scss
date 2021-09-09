@@ -12,14 +12,123 @@ img {
  .section{
      display: flex;
      align-items: center;
-    padding: 0 20px;
+    padding: 80px 0 86px 0;
+    max-width: 280px;
+
 
     @media screen and (min-width:768px){
-        padding: 0 40px;
+        padding: 120px 0px;
+        max-width: 700px ;
+    }
+
+    @media screen and (min-width:1280px){
+        padding: 120px 0 130px 0;
+        max-width: 1050px ;
     }
  }
 
- article{
+
+ .container{
+    padding: 40px 50px 20px 50px;
+ }
+
+ .slid{
      display: flex;
-     flex-direction: column;
+     justify-content: center;
+     flex-wrap: wrap;
+
+     &__foto{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 30px;
+     }
+
+
+
+
+
+    //  &::after{
+    //     content: '';
+    //     background-image: url(../images/icon123.svg);
+    //     background-repeat: no-repeat;
+    //     background-size: 50px 40px;
+    //     position: absolute;
+    //     top: -100px;
+    //  }
+  
+ }
+
+ .slid__comment{
+     position: relative;
+    padding: 40px 50px 20px 50px;
+    margin-bottom: 50px;
+
+    font-size: 12px;
+    line-height: 2.55;
+    text-align: center;
+    background-color: #FAFAFA;
+
+
+
+
+    
+    &::before {
+        content: '';
+
+        position: absolute;
+        top: 30px;
+        left: 60px;
+
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-image: 
+        url(../images/123.svg);
+        background-repeat: no-repeat;
+        background-size: 54px 40px;
+        z-index: 1;
+      
+    }
+    
+
+    @media screen and(min-width: 786px){
+        font-size: 14px;
+        line-height: 2.16;
+        letter-spacing: 0.04em;
+    }
+
+    @media screen and(min-width: 1280px){
+        font-size: 16px;
+        line-height: 1.86;
+    }
+ }
+
+
+ .slid__comment--style{
+    position: relative;
+    z-index: 2;
+    
+    display: inline;
+	background-repeat: no-repeat;
+	background-position: center bottom 1px;
+	background-size: 100% 3px;
+	background-image: linear-gradient(to right, red, blue);
+ }
+
+ 
+
+
+
+ .slid__subtitle{
+    font-size: 14px;
+    line-height: 1.86;
+
+    @media screen and(min-width: 786px){
+        font-size: 16px;
+    }
+
+    @media screen and(min-width: 1280px){
+        font-size: 20px;
+    }
  }
