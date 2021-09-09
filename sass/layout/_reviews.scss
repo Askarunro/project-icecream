@@ -69,6 +69,7 @@ img {
     text-align: center;
     background-color: #FAFAFA;
 
+ 
 
 
 
@@ -105,15 +106,38 @@ img {
  }
 
 
+ .slid__comment--gradient{
+
+    align-items: center;
+   min-width: 180px;
+
+
+
+   @media screen and (min-width:768px){
+       max-width: 525px ;
+   }
+
+   @media screen and (min-width:1280px){
+       max-width: 815px ;
+   }
+ }
+
+
  .slid__comment--style{
     position: relative;
     z-index: 2;
     
-    display: inline;
+    // display: inline-block;
 	background-repeat: no-repeat;
 	background-position: center bottom 1px;
-	background-size: 100% 3px;
+	background-size: 100% 1px;
 	background-image: linear-gradient(to right, red, blue);
+	// background-image: repeating-linear-gradient(
+    //     to bottom,
+    //     #FAFAFA,
+    //     #FAFAFA     calc(1.1em - 1px),
+    //     #E1E1E1 calc(1.1em - 1px),
+    //     #E1E1E1 1.1em);
  }
 
  

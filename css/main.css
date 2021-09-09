@@ -363,14 +363,33 @@ img {
   }
 }
 
+.slid__comment--gradient {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-width: 180px;
+}
+
+@media screen and (min-width: 768px) {
+  .slid__comment--gradient {
+    max-width: 525px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .slid__comment--gradient {
+    max-width: 815px;
+  }
+}
+
 .slid__comment--style {
   position: relative;
   z-index: 2;
-  display: inline;
   background-repeat: no-repeat;
   background-position: center bottom 1px;
-  -webkit-background-size: 100% 3px;
-          background-size: 100% 3px;
+  -webkit-background-size: 100% 1px;
+          background-size: 100% 1px;
   background-image: -webkit-gradient(linear, left top, right top, from(red), to(blue));
   background-image: -webkit-linear-gradient(left, red, blue);
   background-image: -o-linear-gradient(left, red, blue);
