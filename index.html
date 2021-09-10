@@ -9,6 +9,52 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/main.min.css">
     <title>Document</title>
+
+
+
+    <script defer src="/examples/libs/chief-slider/chief-slider.min.js"></script>
+    <script>
+      /* Устанавливаем стартовый индекс слайда по умолчанию: */
+let slideIndex = 1;
+/* Вызываем функцию, которая реализована ниже: */
+showSlides(slideIndex);
+
+/* Увеличиваем индекс на 1 — показываем следующий слайд: */
+function nextSlide() {
+    showSlides(slideIndex += 1);
+}
+
+/* Уменьшаем индекс на 1 — показываем предыдущий слайд: */
+function previousSlide() {
+    showSlides(slideIndex -= 1);  
+}
+
+/* Устанавливаем текущий слайд: */
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
+
+/* Функция перелистывания: */
+function showSlides(n) {
+    /* Обращаемся к элементам с названием класса "item", то есть к картинкам: */
+    let slides = document.getElementsByClassName("item");
+    
+    /* Проверяем количество слайдов: */
+    if (n > slides.length) {
+      slideIndex = 1
+    }
+    if (n < 1) {
+        slideIndex = slides.length
+    }
+  
+    /* Проходим по каждому слайду в цикле for: */
+    for (let slide of slides) {
+        slide.style.display = "none";
+    }
+    /* Делаем элемент блочным: */
+    slides[slideIndex - 1].style.display = "block";    
+}
+    </script>
 </head>
 <body>
     <header>
@@ -54,6 +100,85 @@
                     </div>
 
                 </article>
+
+                <article class="slid">
+                    <div class="slid__foto">
+                        <picture>
+                            <source srcset="
+                            images/team_member1.webp,
+                            images/team_member1@2x.webp 2x,
+                            images/team_member1@3x.webp 3x
+                            "
+                            type="image/webp">
+                            <source srcset="
+                            images/team_member1.jpg,
+                            images/team_member1@2x.jpg 2x,
+                            images/team_member1@3x.jpg 3x
+                            "
+                            >
+                            <img src="./images/team_member1.jpg" alt=""> 
+                        </picture>
+                    </div>
+                    <div class="slid__comment">
+                        <div class="slid__comment--gradient">
+                            <p class="slid__comment--style">
+                                Nullam viverra consectetuer. 
+                                Quisque cursus et, porttitor risus. 
+                                Aliquam sem. In hendrerit nulla quam nunc, accumsan congue. 
+                                Lorem ipsum primis in nibh vel risus.
+                            </p>
+                        </div>
+                        
+                    </div>
+                    <div class="slid__subtitle">
+                        <span class="slid__subtitle--style">Emily, Los Angeles</span>
+                    </div>
+                    <div class="slid__pagination">
+
+                    </div>
+
+                </article>
+
+                <article class="slid">
+                    <div class="slid__foto">
+                        <picture>
+                            <source srcset="
+                            images/team_member1.webp,
+                            images/team_member1@2x.webp 2x,
+                            images/team_member1@3x.webp 3x
+                            "
+                            type="image/webp">
+                            <source srcset="
+                            images/team_member1.jpg,
+                            images/team_member1@2x.jpg 2x,
+                            images/team_member1@3x.jpg 3x
+                            "
+                            >
+                            <img src="./images/team_member1.jpg" alt=""> 
+                        </picture>
+                    </div>
+                    <div class="slid__comment">
+                        <div class="slid__comment--gradient">
+                            <p class="slid__comment--style">
+                                Nullam viverra consectetuer. 
+                                Quisque cursus et, porttitor risus. 
+                                Aliquam sem. In hendrerit nulla quam nunc, accumsan congue. 
+                                Lorem ipsum primis in nibh vel risus.
+                            </p>
+                        </div>
+                        
+                    </div>
+                    <div class="slid__subtitle">
+                        <span class="slid__subtitle--style">Emily, Los Angeles</span>
+                    </div>
+                    <div class="slid__pagination">
+
+                    </div>
+
+                </article>
+
+                <a class="previous" onclick="previousSlide()">&#10094;</a>
+                <a class="next" onclick="nextSlide()">&#10095;</a>
             </div>
             
         </section>
@@ -64,5 +189,6 @@
     <footer>
 
     </footer>
+
 </body>
 </html>
