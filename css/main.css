@@ -359,10 +359,6 @@ img {
   height: auto;
 }
 
-button.slick-arrow {
-  border: none;
-}
-
 .container-slider__title--visually-hidden {
   position: absolute;
   clip: rect(0 0 0 0);
