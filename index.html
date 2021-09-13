@@ -9,52 +9,6 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/main.min.css">
     <title>Document</title>
-
-
-
-    <!-- <script defer src="/examples/libs/chief-slider/chief-slider.min.js"></script>
-    <script>
-      /* Устанавливаем стартовый индекс слайда по умолчанию: */
-let slideIndex = 1;
-/* Вызываем функцию, которая реализована ниже: */
-showSlides(slideIndex);
-
-/* Увеличиваем индекс на 1 — показываем следующий слайд: */
-function nextSlide() {
-    showSlides(slideIndex += 1);
-}
-
-/* Уменьшаем индекс на 1 — показываем предыдущий слайд: */
-function previousSlide() {
-    showSlides(slideIndex -= 1);  
-}
-
-/* Устанавливаем текущий слайд: */
-function currentSlide(n) {
-    showSlides(slideIndex = n);
-}
-
-/* Функция перелистывания: */
-function showSlides(n) {
-    /* Обращаемся к элементам с названием класса "item", то есть к картинкам: */
-    let slides = document.getElementsByClassName("item");
-    
-    /* Проверяем количество слайдов: */
-    if (n > slides.length) {
-      slideIndex = 1
-    }
-    if (n < 1) {
-        slideIndex = slides.length
-    }
-  
-    /* Проходим по каждому слайду в цикле for: */
-    for (let slide of slides) {
-        slide.style.display = "none";
-    }
-    /* Делаем элемент блочным: */
-    slides[slideIndex - 1].style.display = "block";    
-}
-    </script> -->
 </head>
 <body>
     <header>
@@ -63,8 +17,8 @@ function showSlides(n) {
     <main>
         <section class="section-reviews">
             <div class="container-slider">
-                <article class="slid">
-                    <div class="slid__foto">
+                <article class="slide">
+                    <div class="slide__foto">
                         <picture>
                             <source srcset="
                             images/team_member1.webp,
@@ -81,9 +35,9 @@ function showSlides(n) {
                             <img src="./images/team_member1.jpg" alt=""> 
                         </picture>
                     </div>
-                    <div class="slid__comment">
-                        <div class="slid__comment--gradient">
-                            <p class="slid__comment--style">
+                    <div class="slide__comment">
+                        <div class="slide__comment--gradient">
+                            <p class="slide__comment--style">
                                 Nullam viverra consectetuer. 
                                 Quisque cursus et, porttitor risus. 
                                 Aliquam sem. In hendrerit nulla quam nunc, accumsan congue. 
@@ -92,15 +46,94 @@ function showSlides(n) {
                         </div>
                         
                     </div>
-                    <div class="slid__subtitle">
-                        <span class="slid__subtitle--style">Emily, Los Angeles</span>
+                    <div class="slide__subtitle">
+                        <span class="slide__subtitle--style">Emily, Los Angeles</span>
                     </div>
-                    <div class="slid__pagination">
+                    <div class="slide__pagination">
 
                     </div>
 
                 </article>
+                <article class="slide">
+                    <div class="slide__foto">
+                        <picture>
+                            <source srcset="
+                            images/team_member2.webp,
+                            images/team_member2@2x.webp 2x,
+                            images/team_member2@3x.webp 3x
+                            "
+                            type="image/webp">
+                            <source srcset="
+                            images/team_member2.jpg,
+                            images/team_member2@2x.jpg 2x,
+                            images/team_member2@3x.jpg 3x
+                            "
+                            >
+                            <img src="./images/team_member2.jpg" alt=""> 
+                        </picture>
+                    </div>
+                    <div class="slide__comment">
+                        <div class="slide__comment--gradient">
+                            <p class="slide__comment--style">
+                                Assumenda impedit fugiat aliquid commodi beatae iste.
+                                Lorem ipsum,
+                                 dolor sit amet consectetur adipisicing elit. 
+                            </p>
+                        </div>
+                        
+                    </div>
+                    <div class="slide__subtitle">
+                        <span class="slide__subtitle--style">Emily, Los Angeles</span>
+                    </div>
+                    <div class="slide__pagination">
+
+                    </div>
+
+                </article>
+                <article class="slide">
+                    <div class="slide__foto">
+                        <picture>
+                            <source srcset="
+                            images/team_member3.webp,
+                            images/team_member3@2x.webp 2x,
+                            images/team_member3@3x.webp 3x
+                            "
+                            type="image/webp">
+                            <source srcset="
+                            images/team_member3.jpg,
+                            images/team_member3@2x.jpg 2x,
+                            images/team_member3@3x.jpg 3x
+                            "
+                            >
+                            <img src="./images/team_member3.jpg" alt=""> 
+                        </picture>
+                    </div>
+                    <div class="slide__comment">
+                        <div class="slide__comment--gradient">
+                            <p class="slide__comment--style">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                                Minus dolore porro odit, id reprehenderit non esse quasi eveniet,
+                                 a ipsa explicabo voluptatum voluptate magni quam temporibus delectus?
+                            </p>
+                        </div>
+                        
+                    </div>
+                    <div class="slide__subtitle">
+                        <span class="slide__subtitle--style">Emily, Los Angeles</span>
+                    </div>
+                    <div class="slide__pagination">
+
+                    </div>
+
+                </article>
+                <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+            
+                <script src="js/slick.min.js"></script>
+                
+                <script src="js/script.js"></script>
             </div>
+                
+            
         </section>
 
 

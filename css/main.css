@@ -1,4 +1,92 @@
 @charset "UTF-8";
+.container-slider {
+  position: relative;
+}
+
+.container-slider .slick-track {
+  -webkit-transform: translate3d(0px, 0px, 0px) !important;
+          transform: translate3d(0px, 0px, 0px) !important;
+  width: inherit !important;
+}
+
+.container-slider .slick-slide {
+  display: none;
+}
+
+.container-slider .slick-slide.slick-active {
+  display: block;
+}
+
+.container-slider .slick-slide.slick-cloned {
+  display: none;
+}
+
+.container-slider .slick-dots {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-67%);
+      -ms-transform: translateX(-67%);
+          transform: translateX(-67%);
+  z-index: 11;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.container-slider .slick-dots li {
+  list-style: none;
+  margin: 0px 18px;
+}
+
+.container-slider .slick-dots li:nth-child(n + 4) {
+  display: none;
+}
+
+.container-slider .slick-dots button {
+  position: absolute;
+  top: 100%;
+  padding: 0;
+  background-color: inherit;
+  border: none;
+  z-index: 10;
+  font-size: 0;
+  width: 13px;
+  height: 13px;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  background-image: url(../images/ellipse1.svg);
+  background-repeat: no-repeat;
+}
+
+.container-slider .slick-dots li.slick-active button {
+  background-color: inherit;
+  top: 100%;
+  border: none;
+  font-size: 0;
+  width: 13px;
+  height: 13px;
+  background-image: url(../images/home.svg);
+  background-repeat: no-repeat;
+}
+
+/* Слайдер */
+/* Слайдер запущен */
+/* Слайдер с точками */
+/* Ограничивающая оболочка */
+/* Лента слайдов */
+/* Слайд */
+/* Слайд активный (показывается) */
+/* Слайд основной */
+/* Слайд по центру */
+/* Клонированный слайд */
+/* Стрелка */
+/* Стрелка влево */
+/* Стрелка вправо */
+/* Стрелка не активная */
+/* Точки (булиты) */
+/* Активная точка */
+/* Элемент точки */
 /*! modern-normalize v1.1.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
 /*
 Document
@@ -271,6 +359,10 @@ img {
   height: auto;
 }
 
+button.slick-arrow {
+  border: none;
+}
+
 .container-slider__title--visually-hidden {
   position: absolute;
   clip: rect(0 0 0 0);
@@ -307,9 +399,10 @@ img {
 }
 
 .container-slider {
-  padding: 0px 20px;
   margin-left: auto;
   margin-right: auto;
+  min-width: 280px;
+  padding: 0 20px;
 }
 
 @media screen and (min-width: 768px) {
@@ -326,11 +419,11 @@ img {
   }
 }
 
-.slid {
+.slide {
   text-align: center;
 }
 
-.slid__foto {
+.slide__foto {
   width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -343,7 +436,7 @@ img {
   margin-bottom: 30px;
 }
 
-.slid__comment {
+.slide__comment {
   position: relative;
   padding: 40px 50px 30px 50px;
   margin-bottom: 40px;
@@ -354,7 +447,7 @@ img {
   visibility: visible;
 }
 
-.slid__comment::before {
+.slide__comment::before {
   content: '';
   position: absolute;
   top: 30px;
@@ -367,44 +460,37 @@ img {
 }
 
 @media screen and (min-width: 768px) {
-  .slid__comment::before {
+  .slide__comment::before {
     top: 30px;
     left: 40px;
   }
 }
 
 @media screen and (min-width: 1280px) {
-  .slid__comment::before {
+  .slide__comment::before {
     top: 32px;
     left: 50px;
   }
 }
 
-.slid__comment::after {
+.slide__comment::after {
   content: '';
-  background-image: url(../images/ellipse.svg);
-  background-repeat: no-repeat;
   position: absolute;
-  bottom: -50px;
+  z-index: 12;
+  bottom: -30px;
   left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
   display: block;
-  width: 4px;
+  width: 32px;
   height: 4px;
-  z-index: 3;
-  content: '';
-  background-image: url(../images/ellipse.svg);
+  background-image: url(../images/group_elipse.svg);
   background-repeat: no-repeat;
-  position: absolute;
-  bottom: -50px;
-  left: 48%;
-  display: block;
-  width: 4px;
-  height: 4px;
-  z-index: 3;
 }
 
 @media screen and (min-width: 786px) {
-  .slid__comment {
+  .slide__comment {
     padding: 47px 36px 28px 60px;
     margin-bottom: 50px;
     font-size: 14px;
@@ -414,7 +500,7 @@ img {
 }
 
 @media screen and (min-width: 1280px) {
-  .slid__comment {
+  .slide__comment {
     padding: 47px 54px 32px 59px;
     margin-bottom: 50px;
     font-size: 16px;
@@ -422,7 +508,7 @@ img {
   }
 }
 
-.slid__comment--gradient {
+.slide__comment--gradient {
   position: relative;
   -webkit-background-size: 100% 30px;
           background-size: 100% 30px;
@@ -432,7 +518,7 @@ img {
   text-align: center;
 }
 
-.slid__comment--gradient::before {
+.slide__comment--gradient::before {
   content: '';
   position: absolute;
   top: 0;
@@ -443,13 +529,13 @@ img {
 }
 
 @media screen and (min-width: 768px) {
-  .slid__comment--gradient {
+  .slide__comment--gradient {
     -webkit-background-size: 100% 28px;
             background-size: 100% 28px;
   }
 }
 
-.slid__comment--style {
+.slide__comment--style {
   position: relative;
   z-index: 2;
   display: inline-block;
@@ -458,94 +544,31 @@ img {
 }
 
 @media screen and (min-width: 768px) {
-  .slid__comment--style {
+  .slide__comment--style {
     padding: 0px 44px 0 20px;
   }
 }
 
 @media screen and (min-width: 1280px) {
-  .slid__comment--style {
+  .slide__comment--style {
     padding: 0px 35px 0 28px;
   }
 }
 
-.slid__subtitle {
+.slide__subtitle {
   font-size: 14px;
   line-height: 1.86;
 }
 
 @media screen and (min-width: 786px) {
-  .slid__subtitle {
+  .slide__subtitle {
     font-size: 16px;
   }
 }
 
 @media screen and (min-width: 1280px) {
-  .slid__subtitle {
+  .slide__subtitle {
     font-size: 20px;
-  }
-}
-
-/* Кнопки назад и вперёд: */
-.slider .previous, .slider .next {
-  /* Добавляет курсору иконку, когда тот оказывается над кнопкой: */
-  cursor: pointer;
-  /* Положение элемента задаётся относительно границ браузера: */
-  position: absolute;
-  top: 50%;
-  width: auto;
-  margin-top: -22px;
-  padding: 16px;
-  /* Оформление самих кнопок: */
-  color: white;
-  font-weight: bold;
-  font-size: 16px;
-  /* Плавное появление фона при наведении курсора: */
-  -webkit-transition: 0.6s ease;
-  -o-transition: 0.6s ease;
-  transition: 0.6s ease;
-  /* Скругление границ: */
-  -webkit-border-radius: 0 3px 3px 0;
-          border-radius: 0 3px 3px 0;
-}
-
-.slider .next {
-  right: 0;
-  -webkit-border-radius: 3px 0 0 3px;
-          border-radius: 3px 0 0 3px;
-}
-
-/* При наведении курсора на кнопки добавляем фон кнопок: */
-.slider .previous:hover,
-.slider .next:hover {
-  background-color: rgba(0, 0, 0, 0.2);
-}
-
-/* Анимация слайдов: */
-.slider .item {
-  -webkit-animation-name: fade;
-          animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-          animation-duration: 1.5s;
-}
-
-@-webkit-keyframes fade {
-  /* Устанавливаем и изменяем степень прозрачности: */
-  from {
-    opacity: 0.4;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes fade {
-  /* Устанавливаем и изменяем степень прозрачности: */
-  from {
-    opacity: 0.4;
-  }
-  to {
-    opacity: 1;
   }
 }
 /*# sourceMappingURL=main.css.map */
