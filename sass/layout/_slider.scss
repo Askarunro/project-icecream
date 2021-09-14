@@ -1,0 +1,110 @@
+.container-slider{
+    position: relative;
+
+
+    & .slick-track{
+        transform: translate3d(0px, 0px, 0px)!important;
+        width: inherit!important;
+    }
+
+    & .slick-slide{
+        display: none;
+        }
+
+    & .slick-slide.slick-active{
+        display: block;
+        }
+
+    & .slick-slide.slick-cloned{
+        display: none;
+    }
+
+    & .slick-dots{
+        position: absolute;
+        left: 50%;
+        transform: translateX(-67%);
+        z-index: 11;
+        display: flex;
+
+       
+    }
+
+    & .slick-dots li {
+        list-style: none;
+        margin: 0px 18px;
+
+        &:nth-child(n + 4){
+            display: none;
+        }
+    }
+
+    & .slick-dots button {
+        position: absolute;
+        top:100%;
+        padding: 0;
+        background-color: inherit;
+        border: none;
+
+        z-index: 10;
+        font-size: 0;
+        width: 13px;
+        height: 13px;
+        border-radius: 5px;
+        background-image: 
+        url(../images/ellipse1.svg);
+        background-repeat: no-repeat;
+    
+    }
+    & .slick-dots li.slick-active button{
+        background-color: inherit; top:100%;
+        border: none;
+        font-size: 0;
+        width: 13px;
+        height: 13px;
+        background-image: 
+        url(../images/home.svg);
+        background-repeat: no-repeat;
+    }
+}
+
+
+/* Слайдер */
+.slick-slider{}
+/* Слайдер запущен */
+.slick-slider.slick-initialized{}
+/* Слайдер с точками */
+.slick-slider.slick-dotted{}
+/* Ограничивающая оболочка */
+.slick-list {}
+/* Лента слайдов */
+.slick-track{
+}
+/* Слайд */
+.slick-slide{
+}
+/* Слайд активный (показывается) */
+.slick-slide.slick-active{
+}
+/* Слайд основной */
+.slick-slide.slick-current{}
+/* Слайд по центру */
+.slick-slide.slick-center{}
+/* Клонированный слайд */
+.slick-slide.slick-cloned{
+}
+/* Стрелка */
+.slick-arrow{}
+/* Стрелка влево */
+.slick-arrow.slick-prev{}
+/* Стрелка вправо */
+.slick-arrow.slick-next{}
+/* Стрелка не активная */
+.slick-arrow.slick-disabled{}
+/* Точки (булиты) */
+.slick-dots{}
+.slick-dots li{}
+/* Активная точка */
+.slick-dots li.slick-active{
+}
+/* Элемент точки */
+.slick-dots li button{}
