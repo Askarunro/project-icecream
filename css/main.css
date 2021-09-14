@@ -1,92 +1,4 @@
 @charset "UTF-8";
-.container-slider {
-  position: relative;
-}
-
-.container-slider .slick-track {
-  -webkit-transform: translate3d(0px, 0px, 0px) !important;
-          transform: translate3d(0px, 0px, 0px) !important;
-  width: inherit !important;
-}
-
-.container-slider .slick-slide {
-  display: none;
-}
-
-.container-slider .slick-slide.slick-active {
-  display: block;
-}
-
-.container-slider .slick-slide.slick-cloned {
-  display: none;
-}
-
-.container-slider .slick-dots {
-  position: absolute;
-  left: 50%;
-  -webkit-transform: translateX(-67%);
-      -ms-transform: translateX(-67%);
-          transform: translateX(-67%);
-  z-index: 11;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.container-slider .slick-dots li {
-  list-style: none;
-  margin: 0px 18px;
-}
-
-.container-slider .slick-dots li:nth-child(n + 4) {
-  display: none;
-}
-
-.container-slider .slick-dots button {
-  position: absolute;
-  top: 100%;
-  padding: 0;
-  background-color: inherit;
-  border: none;
-  z-index: 10;
-  font-size: 0;
-  width: 13px;
-  height: 13px;
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
-  background-image: url(../images/ellipse1.svg);
-  background-repeat: no-repeat;
-}
-
-.container-slider .slick-dots li.slick-active button {
-  background-color: inherit;
-  top: 100%;
-  border: none;
-  font-size: 0;
-  width: 13px;
-  height: 13px;
-  background-image: url(../images/home.svg);
-  background-repeat: no-repeat;
-}
-
-/* Слайдер */
-/* Слайдер запущен */
-/* Слайдер с точками */
-/* Ограничивающая оболочка */
-/* Лента слайдов */
-/* Слайд */
-/* Слайд активный (показывается) */
-/* Слайд основной */
-/* Слайд по центру */
-/* Клонированный слайд */
-/* Стрелка */
-/* Стрелка влево */
-/* Стрелка вправо */
-/* Стрелка не активная */
-/* Точки (булиты) */
-/* Активная точка */
-/* Элемент точки */
 /*! modern-normalize v1.1.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
 /*
 Document
@@ -567,4 +479,93 @@ img {
     font-size: 20px;
   }
 }
+
+.container-slider {
+  position: relative;
+}
+
+.container-slider .slick-track {
+  -webkit-transform: translate3d(0px, 0px, 0px) !important;
+          transform: translate3d(0px, 0px, 0px) !important;
+  width: inherit !important;
+}
+
+.container-slider .slick-slide {
+  display: none;
+}
+
+.container-slider .slick-slide.slick-active {
+  display: block;
+}
+
+.container-slider .slick-slide.slick-cloned {
+  display: none;
+}
+
+.container-slider .slick-dots {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-67%);
+      -ms-transform: translateX(-67%);
+          transform: translateX(-67%);
+  z-index: 11;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.container-slider .slick-dots li {
+  list-style: none;
+  margin: 0px 18px;
+}
+
+.container-slider .slick-dots li:nth-child(n + 4) {
+  display: none;
+}
+
+.container-slider .slick-dots button {
+  position: absolute;
+  top: 100%;
+  padding: 0;
+  background-color: inherit;
+  border: none;
+  z-index: 10;
+  font-size: 0;
+  width: 13px;
+  height: 13px;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  background-image: url(../images/ellipse1.svg);
+  background-repeat: no-repeat;
+}
+
+.container-slider .slick-dots li.slick-active button {
+  background-color: inherit;
+  top: 100%;
+  border: none;
+  font-size: 0;
+  width: 13px;
+  height: 13px;
+  background-image: url(../images/home.svg);
+  background-repeat: no-repeat;
+}
+
+/* Слайдер */
+/* Слайдер запущен */
+/* Слайдер с точками */
+/* Ограничивающая оболочка */
+/* Лента слайдов */
+/* Слайд */
+/* Слайд активный (показывается) */
+/* Слайд основной */
+/* Слайд по центру */
+/* Клонированный слайд */
+/* Стрелка */
+/* Стрелка влево */
+/* Стрелка вправо */
+/* Стрелка не активная */
+/* Точки (булиты) */
+/* Активная точка */
+/* Элемент точки */
 /*# sourceMappingURL=main.css.map */
